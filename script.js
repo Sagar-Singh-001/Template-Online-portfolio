@@ -1,7 +1,6 @@
 function submitForm(event) {
-  event.preventDefault(); // Prevent the form from submitting
-
-  // Get form data
+  event.preventDefault(); 
+  
   const fullName = document.getElementById('full-name').value;
   const email = document.getElementById('email').value;
   const phone = document.getElementById('phone').value;
@@ -18,7 +17,7 @@ function submitForm(event) {
   const skill1 = document.getElementById('skill-1').value;
   const skill2 = document.getElementById('skill-2').value;
 
-  // Create HTML elements to display form data
+
   const fullNameElement = document.createElement('p');
   fullNameElement.textContent = `Full Name: ${fullName}`;
 
@@ -64,10 +63,8 @@ function submitForm(event) {
   const skill2Element = document.createElement('p');
   skill2Element.textContent = `Skill 2: ${skill2}`;
 
-  // Clear form fields
   document.getElementById('Personal').reset();
 
-  // Append HTML elements to submitted-data div
   const submittedDataElement = document.getElementById('submitted-data');
   submittedDataElement.innerHTML = '';
   submittedDataElement.appendChild(fullNameElement);
